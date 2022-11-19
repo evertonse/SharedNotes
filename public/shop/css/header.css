@@ -1,0 +1,30 @@
+
+
+/* Header Starts */
+
+.header-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.title {
+	margin: 0;
+}
+.underline {
+	border-radius: 2rem;
+	height: 1vh;
+	background-color: var(--background-dark);
+	width: 90vw;
+	content: "";
+	margin-bottom: 1rem;
+}
+/* sort-options-container */
+.sort-options-container {
+	grid-template-columns: repeat(5, minmax(10%, 20%));
+	display: grid;
+	place-items: center;
+}
+
+/* Header Ends */
+
+

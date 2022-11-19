@@ -1,0 +1,14 @@
+/* ------------------ LOGIN FORM ------------------ */
+.login-form {}
+
+.login-container {
+	background-color: #29252a;
+	color: var(--letter-light);
+	max-width: 30%;
+	min-height: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+	gap: 2rem;
+}
