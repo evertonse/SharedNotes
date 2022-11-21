@@ -12,65 +12,69 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\NotesController;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\RegisterController;
 
 Route::get('/', function() {
 	return  PagesController::index();
 });
 
-/* ------ LOGIN ------ */
-Route::get('/product/{id}', function ($slug) {
-	return  PagesController::product($slug);
+
+
+
+/*>> ------ LOGIN & REGISTER ------ */
+Route::get('/logout', function() {
+	return  LoginController::logout();
+})->middleware('auth');
+
+Route::get('/login', function() {
+	return  LoginController::create();
+})->middleware('guest');
+
+Route::post('/login', function() {
+	return  LoginController::store();
+})->middleware('guest');;
+
+
+Route::get('/register', function() {
+	return  RegisterController::create();
+})->middleware('guest');
+
+Route::post('/register', function() {
+	return  RegisterController::store();
+})->middleware('guest');;
+/*<< ------ LOGIN & REGISTER ------ */
+
+
+/*>> ------ Notes  ------ */
+Route::get('/create', function() {
+	return NotesController::create();
 });
 
-/* ------ User Home Page ------ */
-Route::get('/home', function () {
-	return view('/shop/home');
-});
-/* ------ Mail Page ------ */
-Route::get('/mail', function () {
-	return view('/shop/learn/mail');
+Route::post('/create', function() {
+	return NotesController::store();
 });
 
-/* ------ Mail Page ------ */
-Route::get('/login', function () {
-	return view('/shop/login');
+Route::get('/edit/{id}', function($id) {
+	return NotesController::get_edit($id);
+});
+
+Route::post('/edit/{id}', function($id) {
+	return NotesController::post_edit($id);
+});
+
+Route::get('/view/{id}', function($id) {
+	return  NotesController::get_view($id);
 });
 
 
+Route::post('/view/{id}', function($id) {
+	return  NotesController::post_view($id);
+});
+/*<< ------ Notes  ------ */
 
-// whatever is in user will get past to $user	
-Route::get('/{user}', function ($user) {
-	if ($user == 'excyber') {
-		return view("welcome");
-	}
-
-	echo "/history/{user}" /
-	$path = __DIR__ . "/.../resources/shop/history/{$user}";
-
-	$content = file_get_contents($path);
-
-	// dump and die
-	if (!file_exists($path)) {
-	}
-
-	return view($content);
-})->where('user', '[a-z]+');
-
-
-// whatever is in user will get past to $user	
-Route::get('/tutorial/{extrathings}', function ($extra) {
-	$data = [
-		'title' => $extra,
-		'array' => [
-			['head','body','descprition'],
-			['head2','body2','descprition2']
-		]
-	];
-	
-	return view("/tutorial/array" , $data);
-
-})->where('user', '[a-z]+');
-
-
-
+Route::get('/profile/{id}', function($id) {
+	return  PagesController::get_profile($id);
+});
