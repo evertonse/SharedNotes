@@ -29,10 +29,11 @@ class NotesController extends Controller
 			$owner = $user->name;
 			$id_owner = $user->id;
 		}
-		
+		$title = $attr['title'] == null ? "untitled": $attr['title'];
+		$tags = $attr['tags'] == null ? "normal": $attr['title'];
 		$note_data = [
-			'title' 			=> $attr['title'],
-			'tags' 				=> $attr['tags'],
+			'title' 			=> $title,
+			'tags' 				=> $tags,
 			'owner' 			=> $owner,
 			'id_owner' 		=> $id_owner,
 			'description' => $attr['description'],
@@ -58,6 +59,21 @@ class NotesController extends Controller
 			'note' => $note,
 			'comments' => $comments
 		]);
+	}
+	
+	static public function get_delete($id)
+	{
+		$note = Note::where('id','=', $id)->first();
+		if(auth()->check()) {
+			if(auth()->user()->id == $note->id_owner) {
+				Note::where('id', $id)->delete();
+				return back()->with('message','success on deleting');
+			}
+		}
+		else {
+			return back()->with('message','failure on deleting');
+
+		}
 	}
 	
 	static public function post_edit($id)

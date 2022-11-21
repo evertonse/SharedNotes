@@ -108,7 +108,7 @@
 			<h1>Create Note</h1>
 			<div class="info">
 				<input class="fname" type="text" name="title" placeholder="Title of your note">
-				<input type="text" name="tags" placeholder="Tags separeted by colons ex: drama,personal,happy">
+				<input type="text" name="tags"  value="" placeholder="Tags separeted by colons ex: drama,personal,happy">
 			</div>
 			<div>
 				<textarea name="description" placeholder="Description" rows="4"></textarea>

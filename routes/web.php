@@ -73,6 +73,11 @@ Route::get('/view/{id}', function($id) {
 Route::post('/view/{id}', function($id) {
 	return  NotesController::post_view($id);
 });
+
+
+Route::get('/delete/{id}', function($id) {
+	return  NotesController::get_delete($id);
+});
 /*<< ------ Notes  ------ */
 
 Route::get('/profile/{id}', function($id) {

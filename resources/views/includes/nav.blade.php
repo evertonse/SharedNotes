@@ -93,7 +93,7 @@ a {
 <div class="nav">
 	<div class="logo">
 		<a href="/">
-			<img id="logo-img" src="/img/logo.png" alt="" srcset="">
+			<img id="logo-img" src="https://i.ibb.co/1JdV153/logo.png" alt="Logo" srcset="">
 		</a>
 	</div>
 

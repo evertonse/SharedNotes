@@ -45,6 +45,10 @@
 			<form method="get" action="/edit/{{$card->id}}">
 	    	<button type="submit">edit</button>
 			</form>
+			
+			<form method="get" action="/delete/{{$card->id}}">
+	    	<button type="submit">delete</button>
+			</form>
 			@endif
 			@endauth
 		</div>

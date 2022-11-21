@@ -21,9 +21,15 @@ class DatabaseSeeder extends Seeder {
 		//\App\Models\User::factory(10)->create();
 
 		$user = new User;
+		$user->username = 'William Boner';
+		$user->name 		= 'boner';
+		$user->password = bcrypt('123');
+		$user->save();
+
+		$user = new User;
 		$user->username = 'Alan Turing';
 		$user->name 		= 'alan';
-		$user->password = '123';
+		$user->password = bcrypt('123');
 		$user->save();
 		
 		$note = new Note;
@@ -114,7 +120,7 @@ On the other hand, the Church–Turing thesis states that the above three formal
 		$user = new User;
 		$user->username = 'andcarv@academico.ufs.br';
 		$user->name 		= 'Professor André';
-		$user->password = 'professor';
+		$user->password = bcrypt('professor');
 		$user->save();
 
 
@@ -249,7 +255,7 @@ On the other hand, the Church–Turing thesis states that the above three formal
 		$user = new User;
 		$user->username = 'andcarv';
 		$user->name 		= 'Professor André';
-		$user->password = 'professor';
+		$user->password = bcrypt('professor');
 		$user->save();
 
 		$comment = new Comment;
@@ -315,7 +321,7 @@ where the integer {\displaystyle k\geq 2}k\geq 2 is the number of objectives and
 		$user = new User;
 		$user->username = 'excyber';
 		$user->name 		= 'Everton Jr.';
-		$user->password = '123';
+		$user->password = bcrypt('123');
 		$user->save();
 
 		$comment = new Comment;
@@ -361,7 +367,7 @@ Ok, I'll say on more thing, people hyped me up about my grades and say in my Gra
 		$user = new User;
 		$user->username = 'admin';
 		$user->name 		= 'admin';
-		$user->password = 'admin';
+		$user->password = bcrypt('admin');
 		$user->save();
 
 		$comment = new Comment;
@@ -373,7 +379,7 @@ Ok, I'll say on more thing, people hyped me up about my grades and say in my Gra
 		$user = new User;
 		$user->username = 'joana';
 		$user->name 		= 'Joana Raposo';
-		$user->password = '123';
+		$user->password = bcrypt('123');
 		$user->save();
 
 		$comment = new Comment;
@@ -433,7 +439,7 @@ A raposa-cinzenta é uma das duas únicas espécies caninas conhecidas por subir
 		$user = new User;
 		$user->username = 'gaus';
 		$user->name 		= 'Carl Friedrich Gauss';
-		$user->password = '123';
+		$user->password = bcrypt('123');
 		$user->save();
 
 		$comment = new Comment;
@@ -473,7 +479,7 @@ Later years and death";
 			$user = new User;
 			$user->username = 'euler';
 			$user->name 		= 'Leonhard Euler';
-			$user->password = '123';
+			$user->password = bcrypt('123');
 			$user->save();
 			
 			$comment = new Comment;
@@ -534,7 +540,7 @@ Um poliedro convexo possui faces, que são os polígonos convexos, arestas que s
 		$user = new User;
 		$user->username = 'knuth';
 		$user->name 		= 'Donald Knuth';
-		$user->password = '123';
+		$user->password = bcrypt('123');
 		$user->save();
 
 		$comment = new Comment;
