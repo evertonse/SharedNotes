@@ -71,7 +71,6 @@
 
 
 .user {
-	background-color: #9DBFAF;
 	flex-basis: 20%;
 }
 

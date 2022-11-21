@@ -53,7 +53,6 @@
 		<div class="card-title"><h4><b>{{$user->name}}</b></h4></div>
 		<div class="card-button-container">
 			<a href="/profile/{{$user->id}}"><button>see</button></a>
-			<button>follow</button>
 		</div>
 	</div>
 </div>

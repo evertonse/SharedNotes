@@ -14,14 +14,16 @@
 @include('includes.nav')
 
 <div class="notes-profile">
-	
-<form action="/action_page.php">
+	<div class="div">
 	<div class="notes-option">
 		<input  name="view" type="radio" id="notes" value="notes" checked="checked"> Notes
 	</div>
 	
 	<div class="profiles-option"> 
 		<input name="view" type="radio" id="profile" value="profile"> Profiles
+	</div>
+	
+	
 	</div>
 </div>
 	
