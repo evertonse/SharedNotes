@@ -1,0 +1,114 @@
+/* Nav starts here */ 
+#nav-container {
+	font-size: medium;
+	position: sticky;
+	display: flex;
+	width: 100%;
+	height: 12vh;
+	align-items: center;
+	color: var(--letter-light);
+	background-color: var(--background-light);
+	/* adding margin bottom to avoid text to close to it,
+  do not set margin on the other items */
+	margin-bottom: 5rem;
+	overflow: hidden;
+}
+
+.first-part {
+	flex: 1 1 22%;
+	display: flex;
+	align-items: center;
+}
+
+.first-part>* {
+	margin-left: 1rem;
+	margin-right: 2rem;
+}
+
+.second-part {
+	flex: 2 1 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.second-part>* {
+	padding-right: 1rem;
+}
+
+.third-part {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex: 1 1 28%;
+}
+
+.third-part>* {
+	margin-left: 0.9rem;
+}
+
+.logo-container {
+	margin: auto;
+	float: left;
+	padding: auto;
+	padding-right: 2%;
+	overflow: hidden;
+}
+
+.logo-img {
+	height: auto;
+	width: auto;
+	max-width: 70%;
+}
+
+.search-bar [type="search"] {
+	max-width: 70%;
+	height: 2rem;
+	width: 50%;
+}
+
+.personal-info {
+	cursor: pointer;
+	position: relative;
+	display: flex;
+}
+
+.new-session {
+	display: none;
+	padding: 1rem;
+	background: var(--background-dark);
+	position: absolute;
+	flex-direction: column;
+}
+
+.new-session ul {
+	display: flex;
+	flex-direction: column;
+}
+
+.new-session ul .login {
+	cursor: pointer;
+	line-height: 2rem;
+	padding: 1rem;
+	width: 100%;
+	border-top: solid 1px black;
+	flex: 1 1 2.9rem;
+	transition: all 0.25s ease-in;
+}
+
+.new-session ul .login:hover {
+	color: var(--background-dark);
+	background-color: #929db0;
+}
+
+.show-new-session {
+	display: flex;
+}
+
+.nav-quit {
+	font-size: small;
+	line-height: small;
+	padding: auto;
+}
+
+/* Nav Ends here */

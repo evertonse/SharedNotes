@@ -1,2 +1,0 @@
-# SharedNotes
-# BD I Project

@@ -1,0 +1,65 @@
+
+.search-metadata {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+}
+/*>> PROFILE OR NOTES*/
+.note-profile-goup-bar {
+		background-color: #cc0000;
+		height: 5vh;
+		width: 100vw;
+		display: flex;
+		align-items: center;
+		align-content: center;
+		flex-wrap: nowrap
+
+}
+/*<<*/
+
+.cards-container  {
+	position: relative;
+	background-color: azure;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	gap: 1rem;
+	
+	/*Avoid those text */
+	overflow-wrap: break-word;
+}
+
+/* Add some padding inside the card container */
+.card-text-container {
+	padding: 1rem;
+	overflow: hidden;
+	background: cadetblue;
+}
+.cards-container .card {
+	width: 25rem;
+	background-color: rebeccapurple;
+}
+
+.card {
+	padding: 0.5rem;
+	border-radius: 10px;
+	background-color: beige;
+	/* Add shadows to create the "card" effect */
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	display: flex;
+	align-items: center;
+}
+.card-text {
+	text-overflow: ellipsis;
+}
+.card img{
+	width: 145px;
+	border-radius: 8px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
