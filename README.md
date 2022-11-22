@@ -2,7 +2,7 @@
 ## BD Trabalho Final
 - Link para Projeto no Heroku:
   
-  http://sharednotes-bd.herokuapp.com/`
+  http://sharednotes-bd.herokuapp.com/
 
 - Link para Projeto no github:
 
